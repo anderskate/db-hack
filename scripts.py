@@ -15,7 +15,7 @@ def remove_chastisements(schoolkid):
     return chastisements
 
 
-def adding_commendation(schoolkid, subject_title):
+def add_commendation(schoolkid, subject_title):
     commendations = [
         'Молодец!',
         'Отлично!',
