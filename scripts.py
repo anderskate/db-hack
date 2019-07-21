@@ -2,11 +2,11 @@ import random
 
 
 def fix_marks(schoolkid):
-    bed_marks = Mark.objects.filter(schoolkid=schoolkid, points__lt=4)
-    for mark in bed_marks:
+    bad_marks = Mark.objects.filter(schoolkid=schoolkid, points__lt=4)
+    for mark in bad_marks:
         mark.points = 5
         mark.save()
-    return bed_marks
+    return bad_marks
 
 
 def remove_chastisements(schoolkid):
