@@ -11,6 +11,18 @@
 
 ### Пример использования
 
+Из базы данных, с помощью Django shell, получите учетную запись ученика, которому нужно внести изменения. Например:
+```
+from datacenter.models import Schoolkid
+>>> child = Schoolkid.objects.filter(full_name__contains="Фролов Иван")[0]
+>>> child
+<Schoolkid: Фролов Иван Григорьевич 6А>
+```
+Для работы всех функций, необходимо, также импортировать следующие модели данных:
+```
+>>> from datacenter.models import Mark, Сhastisement, Lesson, Commendation
+```
+
 Импортируйте нужную функцию из файла scripts.py. Также, для функции adding_commendation, необходимо импортировать random:
 ```
 >>> from scripts import adding_commendation
